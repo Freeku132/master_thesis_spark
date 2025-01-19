@@ -129,9 +129,11 @@ services:
       - worker2
     ports:
       - "8888:8888"
+      - "4041:4040"
     volumes:
       - ./jupyter/.cache:/home/jupyter/.cache
       - ./jupyter/notebook:/home/jupyter/notebook
+      - ./jupyter/external_data:/home/jupyter/external_data
     networks:
       sparknet:
         ipv4_address: 172.28.1.6
